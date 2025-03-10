@@ -1,0 +1,6 @@
+1.create 4 functions:add, subtract, divide, multiply(done)
+2.Create a operate function that calls the 4 functions above(done)
+3.Create a display with interactable button(working)
+4.create a way to populate display()
+5.Make sure value simplifies after 2 values are operated on
+6.Account for divide by 0 error

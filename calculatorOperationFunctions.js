@@ -15,16 +15,36 @@ numbers.addEventListener("mousedown", (e)=>{
     //has to be integer
     let pressed = e.target.id.at(1);
     if(Number(pressed)){
-        console.log(pressed);
+        registerInput(e);
     }
    
 })
 operators.addEventListener("mousedown", (e)=>{
     let nArr = operatorsRef.filter((o) => o == e.target.id);
     if(nArr.length != 0){
-        console.log(e.target.id);
+        registerInput(e);
     }
 })
+
+function registerInput(event){
+    if(Number(event.target.id.at(1))){
+        if(!num1){
+            num1 = event.target.id;
+            moveToOutput();
+            
+        }else if(!num2){
+            num2 = event.target.id;
+            moveToOutput();
+        }
+    }else{
+        operator = event.target.id;
+        
+    }
+    
+}
+function moveToOutput(){
+
+}
 function operate(num1, num2, operator){
     switch(operator){
         case "+":

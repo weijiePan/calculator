@@ -1,2 +1,2 @@
 # calculator
-could multiple, add, subtract, and divide
+could multiply, add, subtract, and divide

@@ -26,11 +26,11 @@ function pemdas(s){
     }
 }
 function retResult(i, mode, s){// m *, a + , s -, d /
-    let l = i - 1, r = i + 1 
-    while (l > 0 && !/[\+\-\*\/]/.test(s[l])){//find start of left number
+    let l = i, r = i; 
+    while (l - 1>= 0 && !/[\+\-\*\/]/.test(s[l-1])){//find start of left number
         l -= 1;
     }
-    while (r < s.length && !/[\+\-\*\/]/.test(s[r])){//find end of right number
+    while (r  <= s.length && !/[\+\-\*\/]/.test(s[r+1])){//find end of right number
         r += 1;
     }
     switch(mode){
